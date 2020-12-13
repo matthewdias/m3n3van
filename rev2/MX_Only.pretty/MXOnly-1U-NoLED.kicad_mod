@@ -1,4 +1,4 @@
-(module MX_Alps_Hybrid:MXOnly-1U (layer F.Cu) (tedit 5BD3C6C7)
+(module MXOnly-1U-NoLED (layer F.Cu) (tedit 5FD5CC87)
   (fp_text reference REF** (at 0 3.175) (layer Dwgs.User)
     (effects (font (size 1 1) (thickness 0.15)))
   )

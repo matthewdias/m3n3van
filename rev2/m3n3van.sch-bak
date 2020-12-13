@@ -1605,8 +1605,8 @@ U 1 1 5FA09508
 P 5050 9100
 AR Path="/5FA09508" Ref="R6"  Part="1" 
 AR Path="/5F9D2B6A/5FA09508" Ref="R?"  Part="1" 
-F 0 "R6" V 4854 9100 50  0000 C CNN
-F 1 "10k" V 4945 9100 50  0000 C CNN
+F 0 "R6" V 4950 9100 50  0000 C CNN
+F 1 "10k" V 5050 9100 50  0000 C CNN
 F 2 "Resistor_SMD:R_0603_1608Metric" H 5050 9100 50  0001 C CNN
 F 3 "~" H 5050 9100 50  0001 C CNN
 	1    5050 9100
@@ -1900,7 +1900,7 @@ AR Path="/5FA0961E" Ref="C7"  Part="1"
 AR Path="/5F9D2B6A/5FA0961E" Ref="C?"  Part="1" 
 F 0 "C7" H 9092 9446 50  0000 L CNN
 F 1 "10uF" H 9092 9355 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric" H 9000 9400 50  0001 C CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 9000 9400 50  0001 C CNN
 F 3 "~" H 9000 9400 50  0001 C CNN
 	1    9000 9400
 	1    0    0    -1  
@@ -2208,4 +2208,12 @@ Text GLabel 14400 1400 2    50   Input ~ 0
 rotB
 Text GLabel 4950 8300 2    50   Input ~ 0
 col9
+Text GLabel 4950 7400 2    50   Input ~ 0
+rotA
+Text GLabel 4950 8900 2    50   Input ~ 0
+rotB
+Text GLabel 4950 8800 2    50   Input ~ 0
+col12
+Text GLabel 4950 8600 2    50   Input ~ 0
+col11
 $EndSCHEMATC
