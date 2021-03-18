@@ -1104,17 +1104,6 @@ row3
 Wire Wire Line
 	1250 4850 1700 4850
 $Comp
-L MX_Alps_Hybrid:MX-NoLED K_38
-U 1 1 00000381
-P 1750 4450
-F 0 "K_38" H 1750 4683 60  0000 C CNN
-F 1 "KEYSW" H 1750 4350 60  0001 C CNN
-F 2 "MX_Only:MXOnly-1U-NoLED" H 1750 4450 60  0001 C CNN
-F 3 "" H 1750 4450 60  0000 C CNN
-	1    1750 4450
-	1    0    0    -1  
-$EndComp
-$Comp
 L Device:D_Small D_38
 U 1 1 00000380
 P 1700 4750
@@ -1125,10 +1114,6 @@ F 3 "~" H 1400 4700 50  0001 C CNN
 	1    1700 4750
 	0    -1   -1   0   
 $EndComp
-Wire Wire Line
-	1900 4400 2150 4400
-Wire Wire Line
-	1700 4600 1700 4650
 Connection ~ 1700 4850
 $Comp
 L MX_Alps_Hybrid:MX-NoLED K_39
@@ -2099,7 +2084,7 @@ U 1 1 602FB621
 P 3650 7300
 F 0 "Y1" V 3345 7250 50  0000 C CNN
 F 1 "Resonator_Small" V 3436 7250 50  0000 C CNN
-F 2 "Crystal:Resonator_SMD_muRata_CSTxExxV-3Pin_3.0x1.1mm_HandSoldering" H 3625 7300 50  0001 C CNN
+F 2 "Crystal:Resonator_SMD_muRata_CSTxExxV-3Pin_3.0x1.1mm" H 3625 7300 50  0001 C CNN
 F 3 "~" H 3625 7300 50  0001 C CNN
 	1    3650 7300
 	0    1    1    0   
@@ -2216,4 +2201,90 @@ Text GLabel 4950 8800 2    50   Input ~ 0
 col12
 Text GLabel 4950 8600 2    50   Input ~ 0
 col11
+$Comp
+L Device:Rotary_Encoder_Switch SW_2
+U 1 1 60523F15
+P 1300 4500
+F 0 "SW_2" H 1300 4150 50  0000 C CNN
+F 1 "Rotary_Encoder_Switch" H 1200 4250 50  0000 C CNN
+F 2 "Rotary_Encoder:RotaryEncoder_Alps_EC11E-Switch_Vertical_H20mm" H 1150 4660 50  0001 C CNN
+F 3 "~" H 1300 4760 50  0001 C CNN
+	1    1300 4500
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	2200 4400 2150 4400
+$Comp
+L MX_Alps_Hybrid:MX-NoLED K_38
+U 1 1 00000381
+P 2350 4450
+F 0 "K_38" H 2350 4683 60  0000 C CNN
+F 1 "KEYSW" H 2350 4350 60  0001 C CNN
+F 2 "MX_Only:MXOnly-1U-NoLED" H 2350 4450 60  0001 C CNN
+F 3 "" H 2350 4450 60  0000 C CNN
+	1    2350 4450
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	1600 4400 2150 4400
+Connection ~ 2150 4400
+Wire Wire Line
+	2400 4600 1700 4600
+Wire Wire Line
+	1700 4650 1700 4600
+Connection ~ 1700 4600
+Wire Wire Line
+	1700 4600 1600 4600
+$Comp
+L power:GND #PWR0102
+U 1 1 605DA9D5
+P 1000 4500
+F 0 "#PWR0102" H 1000 4250 50  0001 C CNN
+F 1 "GND" V 1005 4372 50  0000 R CNN
+F 2 "" H 1000 4500 50  0001 C CNN
+F 3 "" H 1000 4500 50  0001 C CNN
+	1    1000 4500
+	0    1    1    0   
+$EndComp
+Text GLabel 1000 4600 0    50   Input ~ 0
+rotA
+Text GLabel 1000 4400 0    50   Input ~ 0
+rotB
+$Comp
+L Connector_Generic:Conn_01x03 J1
+U 1 1 60649448
+P 6200 9350
+F 0 "J1" H 6280 9392 50  0000 L CNN
+F 1 "Conn_01x03" H 6280 9301 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 6200 9350 50  0001 C CNN
+F 3 "~" H 6200 9350 50  0001 C CNN
+	1    6200 9350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0103
+U 1 1 6064FD44
+P 6000 9250
+F 0 "#PWR0103" H 6000 9000 50  0001 C CNN
+F 1 "GND" V 6005 9122 50  0000 R CNN
+F 2 "" H 6000 9250 50  0001 C CNN
+F 3 "" H 6000 9250 50  0001 C CNN
+	1    6000 9250
+	0    1    1    0   
+$EndComp
+$Comp
+L power:+5V #PWR0104
+U 1 1 60650D5A
+P 6000 9450
+F 0 "#PWR0104" H 6000 9300 50  0001 C CNN
+F 1 "+5V" V 6015 9578 50  0000 L CNN
+F 2 "" H 6000 9450 50  0001 C CNN
+F 3 "" H 6000 9450 50  0001 C CNN
+	1    6000 9450
+	0    -1   -1   0   
+$EndComp
+Text GLabel 6000 9350 0    50   Input ~ 0
+B3
+Text GLabel 4950 7300 2    50   Input ~ 0
+B3
 $EndSCHEMATC

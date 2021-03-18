@@ -2,7 +2,7 @@
 <export version="D">
   <design>
     <source>C:\Users\Matthew\Documents\GitHub\m3n3van\rev2\m3n3van.sch</source>
-    <date>12/3/2020 03:33:13</date>
+    <date>2/11/2021 02:27:01</date>
     <tool>Eeschema (5.1.4)-1</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
@@ -832,7 +832,7 @@
     </comp>
     <comp ref="C7">
       <value>10uF</value>
-      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
       <datasheet>~</datasheet>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <sheetpath names="/" tstamps="/"/>
