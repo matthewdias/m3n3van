@@ -1,5 +1,4 @@
 EESchema Schematic File Version 4
-LIBS:m3n3van-cache
 EELAYER 30 0
 EELAYER END
 $Descr A2 23386 16535
@@ -1548,7 +1547,7 @@ F 3 "~" H 5750 8500 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L MCU_Microchip_ATmega:ATmega32U4-AU U2
+L m3n3van-rescue:ATmega32U4-AU-MCU_Microchip_ATmega U2
 U 1 1 5FA094EE
 P 4350 8500
 AR Path="/5FA094EE" Ref="U2"  Part="1" 
@@ -1652,14 +1651,14 @@ $EndComp
 $Comp
 L power:GND #PWR06
 U 1 1 5FA09545
-P 3450 7300
+P 2800 7300
 AR Path="/5FA09545" Ref="#PWR06"  Part="1" 
 AR Path="/5F9D2B6A/5FA09545" Ref="#PWR?"  Part="1" 
-F 0 "#PWR06" H 3450 7050 50  0001 C CNN
-F 1 "GND" H 3455 7127 50  0000 C CNN
-F 2 "" H 3450 7300 50  0001 C CNN
-F 3 "" H 3450 7300 50  0001 C CNN
-	1    3450 7300
+F 0 "#PWR06" H 2800 7050 50  0001 C CNN
+F 1 "GND" H 2805 7127 50  0000 C CNN
+F 2 "" H 2800 7300 50  0001 C CNN
+F 3 "" H 2800 7300 50  0001 C CNN
+	1    2800 7300
 	0    1    1    0   
 $EndComp
 $Comp
@@ -2079,17 +2078,6 @@ Wire Wire Line
 	8700 8450 8850 8450
 Connection ~ 8850 8450
 $Comp
-L Device:Resonator_Small Y1
-U 1 1 602FB621
-P 3650 7300
-F 0 "Y1" V 3345 7250 50  0000 C CNN
-F 1 "Resonator_Small" V 3436 7250 50  0000 C CNN
-F 2 "Crystal:Resonator_SMD_muRata_CSTxExxV-3Pin_3.0x1.1mm" H 3625 7300 50  0001 C CNN
-F 3 "~" H 3625 7300 50  0001 C CNN
-	1    3650 7300
-	0    1    1    0   
-$EndComp
-$Comp
 L power:GND #PWR017
 U 1 1 5FA094FF
 P 4150 10300
@@ -2287,4 +2275,76 @@ Text GLabel 6000 9350 0    50   Input ~ 0
 B3
 Text GLabel 4950 7300 2    50   Input ~ 0
 B3
+$Comp
+L MCU_Microchip_ATmega:ATmega32U4-MU U3
+U 1 1 61AD5AD1
+P 4350 8500
+F 0 "U3" H 4350 6611 50  0000 C CNN
+F 1 "ATmega32U4-MU" H 4350 6520 50  0000 C CNN
+F 2 "Package_DFN_QFN:QFN-44-1EP_7x7mm_P0.5mm_EP5.2x5.2mm" H 4350 8500 50  0001 C CIN
+F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-7766-8-bit-AVR-ATmega16U4-32U4_Datasheet.pdf" H 4350 8500 50  0001 C CNN
+	1    4350 8500
+	1    0    0    -1  
+$EndComp
+Connection ~ 3750 7000
+Connection ~ 4350 10300
+Connection ~ 4450 6700
+Connection ~ 4950 9100
+Connection ~ 3750 8300
+Connection ~ 3750 7800
+$Comp
+L Device:Crystal_GND24_Small Y1
+U 1 1 61B2CFAC
+P 3350 7300
+F 0 "Y1" V 3304 7444 50  0000 L CNN
+F 1 "16MHz" V 3395 7444 50  0000 L CNN
+F 2 "Crystal:Crystal_SMD_3225-4Pin_3.2x2.5mm" H 3350 7300 50  0001 C CNN
+F 3 "~" H 3350 7300 50  0001 C CNN
+	1    3350 7300
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3750 7200 3350 7200
+Connection ~ 3750 7200
+Connection ~ 3350 7200
+Wire Wire Line
+	3350 7200 3000 7200
+Wire Wire Line
+	3750 7400 3350 7400
+Connection ~ 3750 7400
+Connection ~ 3350 7400
+$Comp
+L Device:C_Small C8
+U 1 1 61B4F86C
+P 2900 7200
+F 0 "C8" V 2671 7200 50  0000 C CNN
+F 1 "22pF" V 2762 7200 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 2900 7200 50  0001 C CNN
+F 3 "~" H 2900 7200 50  0001 C CNN
+	1    2900 7200
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C_Small C9
+U 1 1 61B703CE
+P 2900 7400
+F 0 "C9" V 2700 7400 50  0000 C CNN
+F 1 "22pF" V 2800 7400 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 2900 7400 50  0001 C CNN
+F 3 "~" H 2900 7400 50  0001 C CNN
+	1    2900 7400
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	3000 7400 3350 7400
+Wire Wire Line
+	3450 7300 3250 7300
+Connection ~ 3250 7300
+Wire Wire Line
+	3250 7300 2800 7300
+Wire Wire Line
+	2800 7200 2800 7300
+Connection ~ 2800 7300
+Wire Wire Line
+	2800 7300 2800 7400
 $EndSCHEMATC
