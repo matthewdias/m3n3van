@@ -1,0 +1,3 @@
+(fp_lib_table
+  (lib (name Keybage_MX_Cutout)(type KiCad)(uri ${KIPRJMOD}/KeybageLibrary/footprints/Keybage_MX_Cutout.pretty)(options "")(descr ""))
+)
